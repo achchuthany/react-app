@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './custom.scss';
+import {Container} from 'react-bootstrap';
+import NavBar from './components/Navbar';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <div>
+      <NavBar/>
+      <App />
+    </div>,
   document.getElementById('root')
 );
 
