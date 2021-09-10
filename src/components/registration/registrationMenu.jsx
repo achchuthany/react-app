@@ -1,52 +1,84 @@
-import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 class RegistrationMenu extends React.Component {
-    render() { 
-        return (
-        <ul className="nav nav-justified my-3 bg-light p-2 shadow-sm">
+  render() {
+    return (
+      <ul className="nav nav-pills nav-justified my-3 bg-light p-2 shadow-sm">
         <li className="nav-item">
-            <NavLink to="/personal" className="nav-link" activeClassName="border-bottom border-primary" >
-                <span >Personal</span>
-            </NavLink>
-        </li>
-        <li className="nav-item ">
-            <NavLink to="/address" className="nav-link" activeClassName="border-bottom border-primary" >
-                <span >Address</span>
-            </NavLink>
-        </li>
-        <li className="nav-item">
-            <NavLink to="/education" className="nav-link" activeClassName="border-bottom border-primary" >
-                Education
-            </NavLink>
+          <NavLink
+            to="/personal"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            <span>Personal</span>
+          </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/citizenship" className="nav-link" activeClassName="border-bottom border-primary">
-                Citizenship
-            </NavLink>
+          <NavLink
+            to="/address"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            <span>Address</span>
+          </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/parents" className="nav-link" activeClassName="border-bottom border-primary">
-                Parents
-            </NavLink>
+          <NavLink
+            to="/education"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            Education
+          </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/photograph" className="nav-link" activeClassName="border-bottom border-primary">
-                Photograph
-            </NavLink>
+          <NavLink
+            to="/citizenship"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            Citizenship
+          </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/documents" className="nav-link" activeClassName="border-bottom border-primary">
-                Documents
-            </NavLink>
+          <NavLink
+            to="/parents"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            Parents
+          </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/complete" className="nav-link" activeClassName="border-bottom border-primary">
-                Complete
-            </NavLink>
+          <NavLink
+            to="/photograph"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            Photograph
+          </NavLink>
         </li>
-    </ul>
+        <li className="nav-item">
+          <NavLink
+            to="/documents"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            Documents
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/complete"
+            className="nav-link text-dark"
+            activeClassName="border-bottom border-success"
+          >
+            Complete
+          </NavLink>
+        </li>
+      </ul>
     );
-    }
+  }
 }
- 
+
 export default RegistrationMenu;
