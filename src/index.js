@@ -1,16 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './custom.scss';
-import {Container} from 'react-bootstrap';
-import NavBar from './components/Navbar';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./custom.scss";
+import "react-toastify/dist/ReactToastify.css";
+
 ReactDOM.render(
-    <div>
-      <NavBar/>
-      <App />
-    </div>,
-  document.getElementById('root')
+  <div>
+    <App />
+  </div>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

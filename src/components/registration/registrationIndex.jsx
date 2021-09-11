@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import RegistrationAddress from "./registrationAddress";
 import RegistrationPersonal from "./registrationPersonal";
@@ -20,6 +25,7 @@ class RegistrationIndex extends Component {
                 <Route path="/address">
                   <RegistrationAddress />
                 </Route>
+                {/* <Redirect from="/" to="personal" /> */}
               </Switch>
             </Router>
           </Col>

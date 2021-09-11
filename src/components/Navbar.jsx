@@ -1,26 +1,41 @@
-import { Col, Navbar, Row, Nav, NavDropdown, Form, FormControl, Button, Container} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
-    return (
-            <Navbar bg="light" expand="lg">
-                <Container>
-                <Navbar.Brand href="#home">MyUoJ</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <NavDropdown title="Applications" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Applications</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
-                </Nav>
-            
-                </Navbar.Collapse>
-                </Container>
-            </Navbar> );
-}
- 
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">MyUoJ</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <NavLink
+              exact
+              to="/"
+              className="nav-link"
+              activeClassName="border-bottom border-success"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/registration"
+              className="nav-link"
+              activeClassName="border-bottom border-success"
+            >
+              Registration
+            </NavLink>
+            <NavLink
+              to="/blog/posts"
+              className="nav-link"
+              activeClassName="border-bottom border-success"
+            >
+              Posts
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
+
 export default NavBar;
