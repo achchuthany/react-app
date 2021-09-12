@@ -8,7 +8,7 @@ const Input = (props) => {
         id={props.name}
         name={props.name}
         onChange={props.onChange}
-        type="text"
+        type={props.type}
         className={props.error ? "form-control is-invalid" : "form-control"}
         disabled={props.disabled}
       />

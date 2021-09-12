@@ -31,6 +31,13 @@ const NavBar = () => {
             >
               Posts
             </NavLink>
+            <NavLink
+              to="/login"
+              className="nav-link"
+              activeClassName="border-bottom border-success"
+            >
+              Login
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

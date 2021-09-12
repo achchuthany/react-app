@@ -1,9 +1,10 @@
 import "./App.css";
 import NavBar from "./components/Navbar";
 import RegistrationIndex from "./components/registration/registrationIndex";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Posts from "./components/blog/posts";
 import { ToastContainer } from "react-toastify";
+import Login from "./components/auth/login";
 
 function App() {
   return (
@@ -21,12 +22,9 @@ function App() {
         pauseOnHover
       />
       <Switch>
-        <Route path="/blog/posts">
-          <Posts />
-        </Route>
-        <Route path="/registration">
-          <RegistrationIndex />
-        </Route>
+        <Route exact path="/blog/posts" component={Posts} />
+        <Route path="/registration" component={RegistrationIndex} />
+        <Route path="/login" component={Login} />
       </Switch>
     </Router>
   );

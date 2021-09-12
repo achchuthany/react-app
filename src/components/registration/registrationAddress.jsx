@@ -32,6 +32,38 @@ class RegistrationAddress extends Form {
             <label className="">i. Permanent Address</label>
             <div className="row">
               <div className="col-md-6">
+                {this.renderInput("address_permanent_no", "Address No")}
+              </div>
+              <div className="col-md-6">
+                {this.renderInput("address_permanent_street", "Address Street")}
+              </div>
+              <div className="col-md-6">
+                {this.renderInput("address_permanent_city", "Address City")}
+              </div>
+              <div className="col-md-6">
+                {this.renderInput("address_permanent_4", "Address Line 4")}
+              </div>
+              <div className="col-md-6">
+                {this.renderInput("address_permanent_state", "Address State")}
+              </div>
+              <div className="col-md-6">
+                {this.renderInput(
+                  "address_permanent_country",
+                  "Address Country"
+                )}
+              </div>
+              <div className="col-md-6">
+                {this.renderInput(
+                  "address_permanent_postal_code",
+                  "Address Postal Code"
+                )}
+              </div>
+            </div>
+
+            <label className="">ii. Contact Address</label>
+
+            <div className="row">
+              <div className="col-md-6">
                 {this.renderInput("address_no", "Address No")}
               </div>
               <div className="col-md-6">
@@ -51,71 +83,6 @@ class RegistrationAddress extends Form {
               </div>
               <div className="col-md-6">
                 {this.renderInput("address_postal_code", "Address Postal Code")}
-              </div>
-            </div>
-
-            <label className="">ii. Contact Address</label>
-            <div className="row">
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_no">
-                    Address No{" "}
-                    <span className="text-danger font-size-16">*</span>
-                  </label>
-                  <input type="text" className="form-control" required />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_street">
-                    Address Street{" "}
-                    <span className="text-danger font-size-16">*</span>
-                  </label>
-                  <input type="text" className="form-control" required />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_city">Address City</label>
-                  <input type="text" className="form-control" />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_4">Address Line 4</label>
-                  <input type="text" className="form-control" />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_state">Address State</label>
-                  <input type="text" className="form-control" />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_country_p">
-                    Address Country{" "}
-                    <span className="text-danger font-size-16">*</span>
-                  </label>
-                  <select className="form-control select2" required>
-                    <option selected disabled>
-                      Select Country
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="address_postal_code">
-                    Address Postal Code
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    pattern="^[0-9]{4,10}$"
-                  />
-                </div>
               </div>
             </div>
 

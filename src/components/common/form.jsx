@@ -16,8 +16,8 @@ class Form extends Component {
     return errors;
   };
 
-  validateProperty = ({ name, value }) => {
-    const obj = { [name]: value };
+  validateProperty = ({ name, value, type, checked }) => {
+    const obj = { [name]: type === "checkbox" ? checked : value };
     const schema = { [name]: this.schema[name] };
     const { error } = Joi.validate(obj, schema);
     return error ? error.details[0].message : null;
@@ -30,7 +30,7 @@ class Form extends Component {
     else delete errors[input.name];
 
     const data = { ...this.state.data };
-    data[input.name] = input.value;
+    data[input.name] = input.type === "checkbox" ? input.checked : input.value;
     this.setState({ data, errors });
   };
   handleSubmit = (e) => {
